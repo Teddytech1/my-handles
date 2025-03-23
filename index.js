@@ -20,6 +20,10 @@ app.use(express.json());
 // Serve the index.html file
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/terms', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'terms.html'));
+});
+
 // Handle the sending of messages
 app.post('/send-message', async (req, res) => {
     const { text } = req.body;
