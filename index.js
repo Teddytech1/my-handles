@@ -28,6 +28,10 @@ app.get('/privacy', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'privacy.html'));
 });
 
+app.get('/data-deletion', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'data-deletion.html'));
+});
+
 // Handle the sending of messages
 app.post('/send-message', async (req, res) => {
     const { text } = req.body;
