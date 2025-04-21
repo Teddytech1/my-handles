@@ -20,18 +20,6 @@ app.use(express.json());
 // Serve the index.html file
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/terms', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'terms.html'));
-});
-
-app.get('/privacy', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'privacy.html'));
-});
-
-app.get('/data-deletion', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'data-deletion.html'));
-});
-
 // Handle the sending of messages
 app.post('/send-message', async (req, res) => {
     const { text } = req.body;
