@@ -2,6 +2,8 @@
 
 - **[VIEW DEMO](https://giftedtech.web.id)**
 
+- You can check out my new portfolio **[HERE](https://giftedtech.web.id)**
+
 ![Portfolio Screenshot](https://zanalydpkhnbrjipfldc.supabase.co/storage/v1/object/public/juustgifted//Screenshot%202025-04-21%20041228.png) 
 
 A clean, responsive portfolio showcasing my skills and projects. Built with modern web technologies.
