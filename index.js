@@ -20,6 +20,18 @@ app.use(express.json());
 // Serve the index.html file
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/terms', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'terms.html'));
+});
+
+app.get('/privacy', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'privacy.html'));
+});
+
+app.get('/data-deletion', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'data-deletion.html'));
+});
+
 // Handle the sending of messages
 app.post('/send-message', async (req, res) => {
     const { text } = req.body;
@@ -54,4 +66,3 @@ setTimeout(() => {
     console.log("Restarting Gifted-Portfolio after 20 minutes...");
     process.exit(0); // Exits the process, which will trigger a restart on most platforms
 }, RESTART_INTERVAL);
-
